@@ -1,0 +1,4 @@
+[[redirects]]
+    from = "/mybuilds"
+    to = "/mybuilds"
+    status = 200
