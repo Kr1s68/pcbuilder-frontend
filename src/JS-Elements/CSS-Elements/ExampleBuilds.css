@@ -1,0 +1,166 @@
+.ExampleBackground {
+
+    height: 55vh;
+    width: 90vw;
+    background-color: rgba(255, 255, 255, 0.173);
+    padding-block: 20px;
+    margin-left: 2vw;
+    margin-block: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 30px black;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.TitleDiv h1{
+
+    color: rgb(231, 227, 231);
+    
+}
+
+.TitleDiv{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.ExampleBuildsDiv{
+
+    height: 48vh;
+    width: 85vw;
+    margin-bottom: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.ExampleBuild{
+
+    height:40vh;
+    width: 20vw;
+    padding-block: 20px;
+    background-color: rgba(53, 36, 15, 0.204);
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.ExampleBuild:hover{
+
+    background-color: rgba(53, 36, 15, 0.800);
+
+}
+
+.ExampleBuild img{
+
+    width: 15vw;
+    margin-inline: 2.5vw;
+    margin-top: 1vh;
+    border-radius: 20px;
+
+}
+
+.IterateComponents{
+
+    padding-inline: 2.5vw
+
+}
+
+.IterateComponents div{
+
+    color: rgb(231, 227, 231)
+
+}
+
+.SubmitButton{
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.SubmitButton:hover{
+
+  background-color: rgba(255, 255, 255, 0.173) !important;
+  color: rgb(231, 227, 231) !important;
+
+}
+@media (max-width: 1000px){
+    .ExampleBackground{
+       height: 100vh;
+       padding-block: 0;
+       justify-content: top!important;
+       margin-left: 0;
+    }
+    .TitleDiv{
+        margin-top: -21.25vh;
+    }
+    .ExampleBuildsDiv{
+        flex-direction: column;
+        justify-content: top!important;
+        margin-top: -26.5vh;
+    }
+    .ExampleBuild{
+        flex-direction: row;
+        height: 15vh;
+        margin-bottom:2vh;
+        width: 75vw;
+    }
+    
+}
+
+@media (max-width: 665px){
+    .TitleDiv h1{
+        font-size: 22px;
+    }
+    .ExampleBackground{
+        background: none;
+        box-shadow: none;
+    }
+    .ExampleBuildsDiv{
+        width: 100%;
+        margin-left: 20px;
+    }
+    .ExampleBuild{
+        width: fit-content;
+    }
+}
+
+@media (max-width: 550px){
+   .ExampleBuildsDiv{
+    margin-top: -16vh;
+   }
+   .ExampleBuild{
+    height: 17vh;
+   }
+}
+@media (max-width: 400px){
+    .ExampleBuildsDiv{
+     margin-top: 150vh;
+     margin-left: 10px;
+    }
+    .ExampleBuild{
+     flex-direction: column;
+     height: 50vh;
+    }
+    .ExampleBuild img{
+        width: 300px;
+    }
+ }
+

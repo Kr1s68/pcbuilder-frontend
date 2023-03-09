@@ -1,0 +1,143 @@
+
+@supports(padding:max(0px)) {
+  body{
+      padding-left: min(0vmin, env(safe-area-inset-left));
+      padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-image: linear-gradient(205deg, rgb(1, 1, 81) ,rgb(58, 18, 58),rgb(118, 1, 93));
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 99%;
+  
+
+}
+
+.MainSplashScreenDiv{
+  margin-left: 2vw;
+  width: 100%;
+  height: 50vh;
+}
+
+.HomeBackgroundDiv{
+  height: 160vh;
+  width: fit-content; 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center;
+}
+
+.BodyDiv{ 
+
+  margin-left: -1.9%;
+
+}
+
+.SignUpButton{
+
+  background-color: rgb(231, 227, 231);
+  width: 25vw; 
+  height: 10vh;
+  min-height: auto; 
+  margin-top: 7vh;
+  font-family: Arial;
+  font-size: 25px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(231, 227, 231);
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+
+.SignUpButton:hover{
+
+  background-color: rgb(231, 227, 231, 0.2);
+  color: rgb(231, 227, 231);
+}
+
+.Article{
+
+  color: rgb(231, 227, 231);
+  padding-inline: 10vw;
+  padding-block: 5vh;
+
+}
+
+.Article h2{
+  font-size: 4.2vh;
+}
+
+.Article p{
+  font-size: 2.5vh;
+}
+
+.Article textarea{
+
+  font-size: 2.5vh;
+  width: 75.512vw;
+  height: 12.145vh;
+  background-color: rgb(231, 227, 231,0.1);
+  color:rgb(231, 227, 231);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(231, 227, 231);
+  border-width: 3px;
+  padding-block: 0.7vh;
+  padding-inline: 1vw;
+
+}
+
+.saveButton{
+
+  background-color: rgb(231, 227, 231);
+  color:#21262d;
+  width: 25vw; 
+  height: 10vh;
+  min-height: auto; 
+  margin-top: 7vh;
+  font-family: Arial;
+  font-size: 6vh;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(231, 227, 231);
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+
+.saveButton:hover{
+
+  background-color: rgb(231, 227, 231, 0.2);
+  color: rgb(231, 227, 231);
+  
+}
+
+@media (max-width: 460px){
+  .MainSplashScreenDiv{
+    display: none;
+  }
+  .loginDiv{
+    max-height: none !important;
+    height: 100vh !important;
+    width: 100vw!important;
+  }
+}

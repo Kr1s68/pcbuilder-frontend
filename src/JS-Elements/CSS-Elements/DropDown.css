@@ -1,0 +1,144 @@
+.DropDownDiv{
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+
+}
+
+.toolTip{
+  color: red;
+  font-size: 35px;
+}
+
+.toolTip .Text{
+  display: none;
+}
+
+.toolTip:hover .Text{
+  display: block;
+}
+
+.toolTip:hover .Exclamation{
+  display: none;
+}
+
+.toolTip:hover{
+  font-size: 16px;
+}
+
+.Button{
+
+  width: 94%;
+  height: 100%;
+  background-color: #3c4552;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding-inline: 90px;
+  cursor: pointer;
+  transition: all 0.3s, border-width 0.1s;
+  
+}
+
+.Button:hover{
+
+  
+  background-color: rgb(231, 227, 231);
+  color: #3c4552;
+  border-color: #3c4552;
+  border-style: solid;
+  border-width: 4px;
+
+}
+
+.Items{
+
+  animation: append-animate .3s linear;
+  margin-top: 1%;
+  position: absolute;
+  background-color: rgb(231, 227, 231);
+  color: #21262d;
+  width: 70%;
+  display: flex;
+  margin-left: -73px;
+  margin-right: -5px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+
+}
+
+.Item{
+
+  
+  background-color: rgb(231, 227, 231);
+  font-size: 18px;
+  width: 99.25%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-block: 10px;
+  padding-inline: 5px;
+  border-radius: 8px;
+
+}
+
+.Item:hover{
+
+  background-color: #21262d;
+  color: rgb(231, 227, 231);
+
+}
+
+@keyframes append-animate {
+	from {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(1);
+		opacity: 1;
+	}
+}
+
+@media (max-width:950px) {
+
+  .Button{
+    font-size: 13px;
+  }
+
+  .Item{
+    font-size: 15px;
+    width: 97%;
+  }
+
+  .Items{
+    margin-left: -83px;
+  }
+
+}
+
+@media (max-width:450px) {
+  .Button{
+    font-size: 10.4px;
+    padding-inline: 5px;
+    padding-block: 7px;
+    height: 65px;
+  }
+
+  .Item{
+    font-size: 12px;
+    width: 120%;
+  }
+
+  .Items{
+    margin-left: -5px;
+    width: 70%;
+  }
+}
+
