@@ -283,7 +283,7 @@ React.useEffect(() => {
         setPrevCPUPerfIndex(i.PerfIndex)
       }
     })
-    if(cpuIterator<40){
+    if(cpuIterator<80){
       setCPUIterator(cpuIterator+1)
       console.log("cpuI" + cpuIterator)
     }
@@ -306,7 +306,7 @@ React.useEffect(()=>{
         setPrevMemoryPerfIndex(i.PerfIndex)
       }
     })
-    if(cpuIterator > 38 && memoryIterator<80){
+    if(cpuIterator > 78 && memoryIterator<160){
       setMemoryIterator(memoryIterator+1)
       console.log("memI: " + memoryIterator)
     }
@@ -330,7 +330,7 @@ React.useEffect(()=>{
         setPrevGPUPerfIndex(i.PerfIndex)
       }
     })
-    if(memoryIterator > 78 &&  gpuIterator < 120){
+    if(memoryIterator > 158 &&  gpuIterator < 220){
       setGPUIterator(gpuIterator+1)
       console.log("GpuI:"+gpuIterator)
     }
