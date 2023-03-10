@@ -1003,7 +1003,7 @@ React.useEffect(() => {
 
     <div className='Components'>
       <p> <button className='emptyButton'></button> Relative performance: <button className='emptyButton'></button> </p>
-      <ProgressBar  bgcolor={"-webkit-linear-gradient(180deg,rgb(255, 0, 179), rgb(4, 0, 255))"} completed = {perfIndex*6.66}/>
+      <ProgressBar  bgcolor={"-webkit-linear-gradient(180deg,rgb(255, 0, 179), rgb(4, 0, 255))"} completed = {perfIndex*3.33}/>
     </div>
    <div className='BottomDiv'>
       <div className='Total'>{"Total: " + total + "лв"}   </div> 
