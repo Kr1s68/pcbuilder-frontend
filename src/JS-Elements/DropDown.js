@@ -229,7 +229,7 @@ export default function DropDown(props){
                     if(props.Type === "CPU"){ 
 
                     return (
-
+                          
                             <div key = {index} className='Item' 
                             onClick={() => {
                               handleDropDownClick(
@@ -252,7 +252,7 @@ export default function DropDown(props){
                               "Цена: " + Items.Price + "лв"
                             }
                             </div>
-
+                          
                     )} else if (props.Type === "GPU"){
 
                           return (
