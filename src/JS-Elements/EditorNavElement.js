@@ -2,14 +2,9 @@ import React from 'react';
 import './CSS-Elements/NavBar.css';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
   Link,
   useNavigate
 } from "react-router-dom";
-import { updateCurrentUser } from 'firebase/auth';
-import { useAuth } from './Contexts/AuthContexts'
-import { useState } from 'react';
  
 
 

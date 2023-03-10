@@ -5,7 +5,6 @@ import "../CSS-Elements/App.css"
 import { useAuth } from '../Contexts/AuthContexts'
 import Axios from 'axios';
 import { Roller } from 'react-awesome-spinners'
-import {ip} from '../../App'
 
 export default function BuildArticle(props) {
 

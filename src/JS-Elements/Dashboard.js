@@ -1,7 +1,7 @@
-import { updateCurrentUser } from 'firebase/auth';
+
 import React, { useState } from 'react';
 import { useAuth } from './Contexts/AuthContexts'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 

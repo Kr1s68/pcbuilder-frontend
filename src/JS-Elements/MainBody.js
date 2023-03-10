@@ -2,11 +2,8 @@ import React from 'react';
 import DropDown from './DropDown';
 import './CSS-Elements/MainBody.css';
 import Axios from 'axios';
-import {createSearchParams, Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { useAuth } from './Contexts/AuthContexts'
-import { waitFor } from '@testing-library/react';
-import e from 'cors';
-import {ip} from '../App'
 import ProgressBar from './ProgressBar';
 import ItemInfo from './WebScrapingElements/ItemInfo';
 import { Toaster } from 'react-hot-toast';

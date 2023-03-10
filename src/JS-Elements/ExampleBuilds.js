@@ -1,8 +1,6 @@
 import './CSS-Elements/ExampleBuilds.css';
 import React from 'react';
-import Axios from 'axios';
-import { useAuth } from './Contexts/AuthContexts'
-import {Link, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 
 

@@ -1,9 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {ip} from '../../App'
-import { load } from 'cheerio';
 import './ItemInfo.css'
-import { BabelLoading } from 'react-loadingg';
 import { Roller } from 'react-awesome-spinners';
 import e from 'cors';
 

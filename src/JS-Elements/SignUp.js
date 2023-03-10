@@ -1,13 +1,12 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Form, Button, Card} from 'react-bootstrap'
 //import "bootstrap/dist/css/bootstrap.min.css"
 import {Container} from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './Contexts/AuthContexts';
+import { useAuth } from './Contexts/AuthContexts';
 import Axios from 'axios';
 import "./CSS-Elements/ExampleBuilds.css"
 import "./CSS-Elements/App.css"
-import {ip} from '../App'
 
 
 function SignUp() {

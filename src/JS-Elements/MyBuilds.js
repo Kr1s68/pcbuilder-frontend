@@ -2,20 +2,13 @@ import React, { useEffect } from 'react';
 import './CSS-Elements/MainBody.css'
 import NavBar from './NavBar';
 import './CSS-Elements/App.css';
-import Axios from 'axios';
 import { useAuth } from './Contexts/AuthContexts'
-import { useLoaderData } from 'react-router';
 import {
     BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
     useNavigate
   } from "react-router-dom";
-  import { Roller } from 'react-awesome-spinners';
-  import {ip} from '../App'
   import { CBRef, firestore } from '../firebase';
-  import { getDocs,getDoc , deleteDoc, doc, query,where } from 'firebase/firestore';
+  import { getDocs, deleteDoc, doc, query,where } from 'firebase/firestore';
 
 function MyBuilds(props) {
 

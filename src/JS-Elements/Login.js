@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 //import "bootstrap/dist/css/bootstrap.min.css"
 import {Container} from 'react-bootstrap'
 import "./CSS-Elements/App.css"
-import { AuthProvider, useAuth } from './Contexts/AuthContexts';
+import { useAuth } from './Contexts/AuthContexts';
 import "./CSS-Elements/ExampleBuilds.css"
 
 

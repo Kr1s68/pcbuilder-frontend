@@ -3,12 +3,8 @@ import Axios from 'axios';
 import { useAuth } from '../Contexts/AuthContexts'
 import {
     BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
     useNavigate
   } from "react-router-dom";
-  import {ip} from '../../App'
 
 function AddCases(props) {
 

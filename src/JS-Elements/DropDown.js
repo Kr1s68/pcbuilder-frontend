@@ -1,6 +1,5 @@
 import './CSS-Elements/DropDown.css';
 import React from 'react';
-import { getSpaceUntilMaxLength, isDisabled } from '@testing-library/user-event/dist/utils';
 
 export default function DropDown(props){
 
