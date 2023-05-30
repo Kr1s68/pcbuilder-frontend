@@ -9,19 +9,13 @@ import { Roller } from 'react-awesome-spinners'
 export default function BuildArticle(props) {
 
     const [displayable, setDisplayable] = React.useState("none")
-
     const [centerable, setCenterable] = React.useState("center")
-
     const { currentUser, logout } = useAuth()
-
     const [edit, setEdit] = React.useState("false")
-
     let [iteration, setIteration] = React.useState(0)
-
     const [loaded, setLoaded] = React.useState(false);
 
     const [formData, setFormData] = React.useState([{
-
         Introduction : '',
         CPU:'',
         Motherboard:'',
@@ -30,41 +24,31 @@ export default function BuildArticle(props) {
         Case:'',
         PSU:'',
         Memory:''
-
     }])
 
     let params;
     try{
             params = new URLSearchParams([['id', props.index + 1]]);
     }catch{
-
     }
 
      // eslint-disable-next-line react-hooks/exhaustive-deps
     const loadArticles = () => {
-            
             Axios.get(`https://pc-builder-api.herokuapp.com/api/data/loadArticle`,{ params }).then((response) => 
-            
                 response.data && setFormData(response.data[0])
-            
             ).then(setLoaded(true))
             setIteration(iteration+=1);
-
     }
 
     React.useEffect(()=> {
         if(iteration < 10){
             loadArticles();
-            console.log(formData);
-          
+            console.log(formData);      
         }
     },[formData, iteration, loadArticles]);
 
-
     const addItem = () => {
-
         Axios.post(`https://pc-builder-api.herokuapp.com/api/data/createArticle`,{ 
-
             Introduction:formData.Introduction,
             CPU:formData.CPU,
             Motherboard:formData.Motherboard, 
@@ -74,63 +58,44 @@ export default function BuildArticle(props) {
             PSU: formData.PSU,
             Memory: formData.Memory,
             id:props.index+1
-
         }).then(() => console.log('success'))
-
     }
 
     function handleClick(){
-
         addItem()
         setEdit(true)
-
     }
       
 
     function handleEdit(){
-
         if(edit){
             setEdit(false)
         }else{
             setEdit(true)
         }
-        
     }
 
     function handleChange(e){
-
         const { name, value } = e.target;
-
         setFormData(prevData => ({
-
            ...prevData, [name] : value
-
         }))
-
     }
 
     React.useEffect(() => {
-    
         try{
-    
           currentUser.isAdmin ? setDisplayable("inline") : console.log("no admin")
           currentUser.isAdmin ? setCenterable("end") : console.log("no admin")
-    
         }catch{
-          
         }
-          
     }, [currentUser]);
 
   return (
     <div className='BodyDiv'>
     <NavBar/>
-       
         <div className='MainDiv' style={edit ? {height:"200vh"} : {height:"250vh"}}>
-
         <div style={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:centerable, width:"100%"}}>
             <div className='CurrrentBuildDiv'> Description:   
-            
             <div 
             className='fa fa-gear LinkText' 
             style={{cursor:"pointer", fontSize:"39px", textDecoration:'none', color:'white', marginTop:"32px", marginLeft:"38.5vw", marginRight:"3.3vw",display:displayable }}

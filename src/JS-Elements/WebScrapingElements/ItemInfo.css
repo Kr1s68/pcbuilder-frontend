@@ -1,12 +1,18 @@
-.priceDiv{
+.priceDiv {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: 50px;
   column-gap: 18px;
 }
 
-.priceDiv div{
-    transition: all 0.3s;
-    margin: 5px;
-    margin-top: 20px;
+.priceDiv div {
+  transition: all 0.3s;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+  .priceDiv {
+    grid-template-columns: 1fr 1fr;
+  }
 }

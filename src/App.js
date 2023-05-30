@@ -63,54 +63,29 @@ function App() {
   return (
 
       <AuthProvider>
-
         <Router>
-
         <Routes>
-
           <Route exact path="/" element={<Home/>} />
-
           <Route path='/builder' element = {<Builder isLoaded = {isLoaded} loadedBuild = {currentBuild}/>} />
-
           <Route path = '/signup' element = {<SignUp/>}/>
-
           <Route path = '/login' element = {<Login/>}/>
-
           <Route path = '/dashboard' element = {<Dashboard/>}/>
-
           <Route path = '/addcpus' element = {<> <EditorNavElement/><AddCpus/></>}/>
-
           <Route path = '/addMotherboards' element = {<><EditorNavElement/><AddMotherboards/></>}/>
-
           <Route path = '/addGpus' element = {<><EditorNavElement/><AddGpus/></>}/>
-
           <Route path = '/addMemory' element = {<><EditorNavElement/><AddMemory/></>}/>
-
           <Route path = '/addStorage' element = {<><EditorNavElement/><AddStorage/></>}/>
-
           <Route path = '/addCases' element = {<><EditorNavElement/><AddCases/></>}/>
-
           <Route path = '/addPsus' element = {<><EditorNavElement/><AddPsus/></>}/>
-
           <Route path = '/editBuilds' element = {<EditExampleBuilds/>}/>
-
           <Route path = '/mybuilds' element = {<MyBuilds loadSavedBuild = {loadSavedBuild}/>}/>
-
           <Route path = '/Article0' element = {<BuildArticle index = {0} />}/>
-
           <Route path = '/Article1' element = {<BuildArticle index = {1} />}/>
-
           <Route path = '/Article2' element = {<BuildArticle index = {2} />}/>
-
           <Route path = '/Article3' element = {<BuildArticle index = {3} />}/>
-
           <Route path = '/test' element = {<ItemInfo/>}/>
-
-
         </Routes>
-          
       </Router>
-
     </AuthProvider>
        
      

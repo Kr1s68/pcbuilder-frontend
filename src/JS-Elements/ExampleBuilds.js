@@ -49,9 +49,7 @@ export default function ExampleBuilds(){
 ])
 
     return (
-
         <div className="ExampleBackground">
-
             <div className = "TitleDiv" style ={{justifyContent:centerable}}>
                 <h1>Example Builds</h1>  
                 <div
@@ -59,42 +57,24 @@ export default function ExampleBuilds(){
                 style={{fontSize:"39px", textDecoration:'none', color:'rgb(231, 227, 231)',marginLeft:"34.5vw", marginRight:"3.3vw", display:displayable, cursor:"pointer" }} 
                 ></div>
             </div>
-           
-            
             <div className='ExampleBuildsDiv'>
-
                 { buildData.map((build, i) => { 
-                    
                     return (
-
                         <div key = {i} className='ExampleBuild' onClick={() => Navigate(`/Article${i}`)}>
-
                         <img src = {build.IMG} alt = "balls"></img>
-    
                         <div className='ExampleBuildComponents'>
-    
                             <h4 style={{paddingInline: "2.5vw", marginBlock: "10px", color: "rgb(231, 227, 231)"}}>Components: </h4>
-    
                             <div className='IterateComponents'>
-    
                                 <div>CPU: {build.CPU}</div>
                                 <div>Motherboard: {build.Motherboard}</div>
                                 <div>Memory: {build.Memory}</div>
                                 <div>GPU: {build.GPU}</div>
-                                
                             </div>
-    
                         </div>
-    
                     </div>
-
                     )
-                  
-            
             })}
-
             </div>
-
         </div>
 
     )

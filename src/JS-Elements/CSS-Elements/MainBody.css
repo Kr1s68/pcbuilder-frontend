@@ -1,8 +1,7 @@
 .MainDiv {
-
   margin-top: 1%;
   margin-bottom: 4%;
-  height:160vh;
+  height: 160vh;
   width: 95vw;
   min-width: 200px;
   min-height: 200px;
@@ -14,45 +13,43 @@
   align-items: center;
   padding-bottom: 20vh;
   box-shadow: 0 0 30px black;
-
 }
 
-.itemInfoButton{
+.itemInfoButton {
   transition: all 0.3s;
-  position:relative;
+  position: relative;
   width: 120px;
   cursor: pointer;
   background-color: transparent;
   color: transparent;
   border: none;
 }
-.itemInfoButton img{
+.itemInfoButton img {
   height: 25px;
 }
 
-.itemInfoButton:hover{
-  background: -webkit-linear-gradient(25deg,rgb(255, 0, 179), rgb(4, 0, 255));
+.itemInfoButton:hover {
+  background: -webkit-linear-gradient(25deg, rgb(255, 0, 179), rgb(4, 0, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 14.5px;
 }
 
-.BuildTitleDiv{
+.BuildTitleDiv {
   display: flex;
 }
 
-.MobileBuildTitleDiv{
+.MobileBuildTitleDiv {
   text-align: center;
   display: none;
-  margin-top: 2%;  
+  margin-top: 2%;
   font-size: 18px;
   color: rgb(231, 227, 231);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
-.Components{
-
+.Components {
   width: 80%;
   height: 10%;
   background-color: rgb(231, 227, 231);
@@ -64,12 +61,9 @@
   justify-content: center;
   align-items: center;
   padding-block: 20px;
-
 }
 
-
-.SecondaryComponents{
-
+.SecondaryComponents {
   width: 80%;
   height: 10%;
   background-color: rgb(231, 227, 231);
@@ -81,24 +75,20 @@
   justify-content: center;
   align-items: center;
   padding-block: 20px;
-
 }
 
-.SecondaryComponents p{
-
+.SecondaryComponents p {
   font-family: Arial, Helvetica, sans-serif;
-  color:  rgba(231, 227, 231, 0.993)  ;
+  color: rgba(231, 227, 231, 0.993);
   height: 12%;
   font-size: 16px;
   font-weight: bold;
   margin-top: 0;
-
 }
 
-.Components p{
-
+.Components p {
   font-family: Arial, Helvetica, sans-serif;
-  color:  #282c34;
+  color: #282c34;
   width: 95%;
   font-size: 16px;
   font-weight: bold;
@@ -109,28 +99,24 @@
   text-align: center;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.emptyButton{
+.emptyButton {
   background: transparent;
   color: transparent;
   border: none;
   width: 120px;
 }
 
-.CurrrentBuildDiv{
-
-  margin-top: 2%;  
+.CurrrentBuildDiv {
+  margin-top: 2%;
   font-size: 24px;
   color: rgb(231, 227, 231);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-
 }
 
-.Plus{
-
+.Plus {
   position: absolute;
   margin-left: 86vw;
   margin-top: 94vh;
@@ -145,70 +131,57 @@
   background-color: rgb(231, 227, 231);
   cursor: pointer;
   transition: all 0.3s;
-
 }
 
-.Plus:hover{
-
+.Plus:hover {
   border-color: rgb(231, 227, 231);
   color: rgb(231, 227, 231);
   background-color: transparent;
-
 }
 
-.Total{
-
+.Total {
   color: rgb(231, 227, 231);
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-
 }
 
-.LinkText:hover{
-
-  background: -webkit-linear-gradient(25deg,rgb(140, 52, 255), rgb(41, 37, 255));
+.LinkText:hover {
+  background: -webkit-linear-gradient(
+    25deg,
+    rgb(140, 52, 255),
+    rgb(41, 37, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 22px;
-
 }
 
-
-.LinkText{
-
+.LinkText {
   transition: all 0.3s;
+}
 
-}                                               
-
-.BottomDiv{
-
+.BottomDiv {
   margin-top: 80px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:space-evenly;
-  
-
+  justify-content: space-evenly;
 }
 
-.BottomDiv div{
-
+.BottomDiv div {
   margin-right: 8vw;
-
 }
 
-.BottomDiv button{
-
+.BottomDiv button {
   background-color: rgb(231, 227, 231);
   color: #282c34;
-  width: 20vw; 
+  width: 20vw;
   height: 8vh;
-  min-height: auto; 
+  min-height: auto;
   margin-left: 8vw;
   font-family: Arial;
   font-size: 25px;
@@ -218,33 +191,27 @@
   border-color: rgb(231, 227, 231);
   cursor: pointer;
   transition: all 0.3s;
-
 }
 
-.BottomDiv button:hover{
+.BottomDiv button:hover {
   background-color: rgb(231, 227, 231, 0.2);
   color: rgb(231, 227, 231);
 }
 
-.differentP{
-
-  background:#282c34;
+.differentP {
+  background: #282c34;
   width: 80%;
-
 }
 
-.buttonDiv{
-
+.buttonDiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-block: 1vh;
-
 }
 
-.buttonDiv button{
-
+.buttonDiv button {
   height: 6vh;
   width: 15vw;
   color: rgb(231, 227, 231);
@@ -257,57 +224,57 @@
   border-color: #21262d;
   cursor: pointer;
   transition: all 0.3s;
-
 }
 
-
-.buttonDiv button:hover{
-
-  background: -webkit-linear-gradient(25deg,rgba(140, 52, 255, 0.39), rgba(41, 37, 255, 0.37));
+.buttonDiv button:hover {
+  background: -webkit-linear-gradient(
+    25deg,
+    rgba(140, 52, 255, 0.39),
+    rgba(41, 37, 255, 0.37)
+  );
   color: #282c34;
-
 }
-.InfoDiv{
+.InfoDiv {
   flex-direction: row;
 }
-.StorageButton{
+.StorageButton {
   display: none;
 }
-@media(max-width: 1200px){
-  .SecondaryComponents{
+@media (max-width: 1200px) {
+  .SecondaryComponents {
     height: fit-content;
   }
-  .InfoDiv{
+  .InfoDiv {
     height: fit-content;
   }
-  .SecondaryComponents p{
+  .SecondaryComponents p {
     font-size: 12px;
   }
 }
 
-@media (max-width:950px) {
+@media (max-width: 950px) {
   .LinkText {
-   font-size: 20px;
+    font-size: 20px;
   }
-  .BuildTitleDiv{
+  .BuildTitleDiv {
     display: none;
   }
-  .MobileBuildTitleDiv{
+  .MobileBuildTitleDiv {
     display: inline;
   }
-  .Components{
+  .Components {
     height: 90px;
   }
-  .SecondaryComponents{
+  .SecondaryComponents {
     height: fit-content;
   }
-  .SecondaryComponents p{
+  .SecondaryComponents p {
     font-size: 11px;
   }
-  .Components p{
+  .Components p {
     font-size: 14px;
   }
-  .Plus{
+  .Plus {
     margin-left: 86vw;
     margin-top: 74vh;
     height: 60px;
@@ -316,149 +283,152 @@
   }
 }
 
-@media (max-width:820px) {
-  .BottomDiv{
+@media (max-width: 820px) {
+  .BottomDiv {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .BottomDiv button{
+  .BottomDiv button {
     width: 350px;
     margin-top: 50px;
   }
 
-  .Total{
+  .Total {
     margin-left: 100px;
   }
 
-  .Plus{
+  .Plus {
     display: none;
   }
-  .StorageButton{
+  .StorageButton {
     display: inline;
   }
-  .SecondaryComponents{
+  .SecondaryComponents {
     height: fit-content;
   }
-  .buttonDiv{
+  .buttonDiv {
     flex-direction: row;
     justify-content: space-around;
   }
-  .buttonDiv button{
+  .buttonDiv button {
     width: 180px;
   }
-  .InfoDiv{
+  .InfoDiv {
     flex-direction: column;
   }
-  .differentP{
+  .differentP {
     width: fit-content;
   }
-
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
   .LinkText {
     font-size: 14px;
-   }
-   .MobileBuildTitleDiv{
+  }
+  .MobileBuildTitleDiv {
     font-size: 21px;
-   }
-   .Components{
-     height: 55px;
-     width: 98%;
-     margin-top:20px;
-   }
-   .Components p{
-     font-size: 12px;
-   }
-   .MainDiv{
+  }
+  .Components {
+    height: 55px;
+    width: 98%;
+    margin-top: 20px;
+  }
+  .Components p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .MainDiv {
     border-radius: 20px;
-    box-shadow:none;
+    box-shadow: none;
     height: 100% !important;
     background-color: #282c3400;
-   }
-   .BottomDiv button{
+  }
+  .BottomDiv button {
     width: 300px;
     margin-top: 50px;
     margin-left: -10px;
   }
-  .Total{
+  .Total {
     margin-left: 40px;
   }
-  .SecondaryComponents{
+  .SecondaryComponents {
     height: fit-content;
   }
-  .buttonDiv{
+  .buttonDiv {
     flex-direction: row;
     justify-content: space-around;
   }
-  .buttonDiv button{
+  .buttonDiv button {
     width: 160px;
     font-size: 20px;
   }
-  .InfoDiv{
+  .InfoDiv {
     flex-direction: column;
   }
-  .differentP{
+  .differentP {
     width: fit-content;
   }
-  .SecondaryComponents p{
+  .SecondaryComponents p {
     font-size: 7.5px;
   }
-  
+  .itemInfoButton {
+    padding-inline: 2px;
+  }
+  .itemInfoButton img {
+    height: 15px;
+  }
 }
 
-@media (max-height:450px) {
+@media (max-height: 450px) {
   .LinkText {
     font-size: 14px;
-   }
-   .MobileBuildTitleDiv{
+  }
+  .MobileBuildTitleDiv {
     font-size: 14px;
-   }
-   .Components{
-     height: 55px;
-     width: 90%;
-     margin-top:20px;
-   }
-   .Components p{
-     font-size: 12px;
-   }
-   .MainDiv{
+  }
+  .Components {
+    height: 55px;
+    width: 90%;
+    margin-top: 20px;
+  }
+  .Components p {
+    font-size: 12px;
+  }
+  .MainDiv {
     border-radius: 20px;
-    box-shadow:none;
+    box-shadow: none;
     background-color: #282c3400;
-   }
-   .BottomDiv button{
+  }
+  .BottomDiv button {
     width: 300px;
     margin-top: 50px;
     margin-left: -10px;
   }
-  .Total{
+  .Total {
     margin-left: 40px;
   }
-  .SecondaryComponents{
+  .SecondaryComponents {
     height: fit-content;
   }
-  .buttonDiv{
+  .buttonDiv {
     flex-direction: row;
     justify-content: space-around;
   }
-  .buttonDiv button{
+  .buttonDiv button {
     width: 160px;
     height: 40px;
     font-size: 20px;
   }
-  .InfoDiv{
+  .InfoDiv {
     flex-direction: column;
   }
-  .differentP{
+  .differentP {
     width: 98%;
     height: 80px;
   }
-  .differentP p{
+  .differentP p {
     font-size: 7.5px;
   }
-  
 }
-

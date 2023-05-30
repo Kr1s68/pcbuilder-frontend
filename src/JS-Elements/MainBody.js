@@ -814,14 +814,14 @@ React.useEffect(() => {
 
         <DropDown
 
-        Type = "CPU"
-        CPUS = {CPUS}
-        getSocket = {getSocket}
-        getPrice = {getPrice}
-        setCPU = {setCPU}
-        isLoaded = {isLoaded}
-        loadedBuild = {props.loadedBuild}
-        setIsLoaded = {setIsLoaded}
+        Type = "CPU" 
+        CPUS = {CPUS} 
+        getSocket = {getSocket} 
+        getPrice = {getPrice} 
+        setCPU = {setCPU} 
+        isLoaded = {isLoaded} 
+        loadedBuild = {props.loadedBuild} 
+        setIsLoaded = {setIsLoaded} 
         name = "CPU"
         
         />
