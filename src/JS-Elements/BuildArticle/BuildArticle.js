@@ -33,12 +33,19 @@ export default function BuildArticle(props) {
     }
 
      // eslint-disable-next-line react-hooks/exhaustive-deps
-    const loadArticles = () => {
-            Axios.get(`https://pc-builder-api.herokuapp.com/api/data/loadArticle`,{ params }).then((response) => 
-                response.data && setFormData(response.data[0])
-            ).then(setLoaded(true))
-            setIteration(iteration+=1);
-    }
+     const loadArticles = async () => {
+        try {
+          const response = await Axios.get(`https://pcbuilder-api.onrender.com/api/data/loadArticle`, { params });
+          if (response && response.data.rows.length > 0) {
+            setFormData(response.data.rows[0]);
+          }
+          setLoaded(true);
+          setIteration(iteration + 1);
+        } catch (error) {
+          // Handle any errors that occur during the Axios request
+          console.error(error);
+        }
+      };    
 
     React.useEffect(()=> {
         if(iteration < 10){
@@ -48,7 +55,7 @@ export default function BuildArticle(props) {
     },[formData, iteration, loadArticles]);
 
     const addItem = () => {
-        Axios.post(`https://pc-builder-api.herokuapp.com/api/data/createArticle`,{ 
+        Axios.post(`https://pcbuilder-api.onrender.com/api/data/createArticle`,{ 
             Introduction:formData.Introduction,
             CPU:formData.CPU,
             Motherboard:formData.Motherboard, 
@@ -108,32 +115,32 @@ export default function BuildArticle(props) {
             (<article className='Article'>
                 <h2>Introduction</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.Introduction}
+                    {formData.introduction}
                 </p>
                 <textarea onChange={handleChange} name = "Introduction" value={formData.Introduction} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>CPU</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.CPU}
+                    {formData.cpu}
                 </p>
                 <textarea onChange={handleChange} name = "CPU" value={formData.CPU} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>Motherboard</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.Motherboard}
+                    {formData.motherboard}
                 </p>
                 <textarea onChange={handleChange} name = "Motherboard" value={formData.Motherboard} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>Memory</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.Memory}
+                    {formData.memory}
                 </p>
                 <textarea onChange={handleChange} name = "Memory" value={formData.Memory} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>Storage</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.Storage}
+                    {formData.storage}
                 </p>
                 <textarea onChange={handleChange} name='Storage' value={formData.Storage} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>GPU</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.GPU}
+                    {formData.gpu}
                 </p>
                 <textarea onChange={handleChange} name='GPU' value={formData.GPU} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>Case</h2>
@@ -143,7 +150,7 @@ export default function BuildArticle(props) {
                 <textarea onChange={handleChange} name='Case' value={formData.Case} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
                 <h2>PSU</h2>
                 <p style={edit ? {display:"inline"} : {display:"none"}}>
-                    {formData.PSU}
+                    {formData.psu}
                 </p>
                 <textarea onChange={handleChange} name='PSU' value={formData.PSU} style={!edit ? {display:"inline"} : {display:"none"}}></textarea>
             </article>)}

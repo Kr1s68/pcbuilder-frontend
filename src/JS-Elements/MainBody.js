@@ -151,7 +151,7 @@ const saveBuild= () => {
       ...prevBuild, PRICE: props.loadedBuild.PRICE, Motherboard:props.loadedBuild.Motherboard
     }))
   }
-      /*Axios.post(`https://pc-builder-api.herokuapp.com/api/data/saveBuild`,{ 
+      /*Axios.post(`https://pcbuilder-api.onrender.com/api/data/saveBuild`,{ 
         currentBuild
     }).then(() => console.log('success'))*/
     addDoc(CBRef,{
@@ -180,20 +180,22 @@ const saveBuild= () => {
 
   const getCpus = () => {
 
-    Axios.get(`https://pc-builder-api.herokuapp.com/api/data/Cpus`,{ 
+    Axios.get(`http://localhost:3001/api/data/Cpus`,{ 
 
-    }).then((response) => setCPUS(response.data))
+    }).then((response) => setCPUS(response.data.rows))
 
 
 }
+
+console.log(CPUS)
 
 const [Motherboards, setMotherboards] = React.useState([])
 
 const getMotherboards = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/Motherboards`,{ 
+  Axios.get(`http://localhost:3001/api/data/Motherboards`,{ 
 
-  }).then((response) => setMotherboards(response.data))
+  }).then((response) => setMotherboards(response.data.rows))
 
 
 }
@@ -202,9 +204,9 @@ const [GPUS, setGPUS] = React.useState([])
 
 const getGPUS = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/GPUS`,{ 
+  Axios.get(`http://localhost:3001/api/data/GPUS`,{ 
 
-  }).then((response) => setGPUS(response.data))
+  }).then((response) => setGPUS(response.data.rows))
 
 
 }
@@ -213,9 +215,9 @@ const [Memory, setMemory] = React.useState([])
 
 const getMemory = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/Memory`,{ 
+  Axios.get(`http://localhost:3001/api/data/Memory`,{ 
 
-  }).then((response) => setMemory(response.data))
+  }).then((response) => setMemory(response.data.rows))
 
 
 }
@@ -224,9 +226,9 @@ const [Storage, setStorage] = React.useState([])
 
 const getStorage = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/Storage`,{ 
+  Axios.get(`http://localhost:3001/api/data/Storage`,{ 
 
-  }).then((response) => setStorage(response.data))
+  }).then((response) => setStorage(response.data.rows))
 
 
 }
@@ -235,9 +237,9 @@ const [Cases, setCases] = React.useState([])
 
 const getCases = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/Cases`,{ 
+  Axios.get(`http://localhost:3001/api/data/Cases`,{ 
 
-  }).then((response) => setCases(response.data))
+  }).then((response) => setCases(response.data.rows))
 
 
 }
@@ -246,13 +248,14 @@ const [PSUS, setPSUS] = React.useState([])
 
 const getPSUS = () => {
 
-  Axios.get(`https://pc-builder-api.herokuapp.com/api/data/PSUS`,{ 
+  Axios.get(`http://localhost:3001/api/data/PSUS`,{ 
 
-  }).then((response) => setPSUS(response.data))
+  }).then((response) => setPSUS(response.data.rows))
 
 
 }
 
+console.log(Motherboards)
 
 React.useEffect(() => {
   getCpus();
@@ -274,10 +277,10 @@ const [memoryIterator, setMemoryIterator] = React.useState(40);
 React.useEffect(() => {
   if(isLoaded){
     CPUS.map((i,e) => {
-      if(props.loadedBuild.CPU.includes(i.Model)){
-        console.log(props.loadedBuild.CPU + " " + i.PerfIndex)
-        setPerfIndex((perfIndex-prevCPUPerfIndex)+i.PerfIndex)
-        setPrevCPUPerfIndex(i.PerfIndex)
+      if(props.loadedBuild.CPU.includes(i.model)){
+        console.log(props.loadedBuild.CPU + " " + i.perfindex)
+        setPerfIndex((perfIndex-prevCPUPerfIndex)+i.perfindex)
+        setPrevCPUPerfIndex(i.perfindex)
       }
     })
     if(cpuIterator<80){
@@ -286,10 +289,10 @@ React.useEffect(() => {
     }
   }else{
     CPUS.map((i,e) => {
-      if(currentBuild.CPU.includes(i.Model)){
-        console.log(i.Model + " " + i.PerfIndex)
-        setPerfIndex((perfIndex-prevCPUPerfIndex)+i.PerfIndex)
-        setPrevCPUPerfIndex(i.PerfIndex)
+      if(currentBuild.CPU.includes(i.model)){
+        console.log(i.model + " " + i.perfindex)
+        setPerfIndex((perfIndex-prevCPUPerfIndex)+i.perfindex)
+        setPrevCPUPerfIndex(i.perfindex)
       }
     })
   }
@@ -297,10 +300,10 @@ React.useEffect(() => {
 React.useEffect(()=>{
   if(isLoaded){
     Memory.map((i,e) => {
-      if(props.loadedBuild.Memory.includes(i.Model) && cpuIterator > 38){
-        console.log(i.Model + " " + i.PerfIndex)
-        setPerfIndex((perfIndex-prevMemoryPerfIndex) + i.PerfIndex)
-        setPrevMemoryPerfIndex(i.PerfIndex)
+      if(props.loadedBuild.Memory.includes(i.model) && cpuIterator > 38){
+        console.log(i.model + " " + i.perfindex)
+        setPerfIndex((perfIndex-prevMemoryPerfIndex) + i.Perfindex)
+        setPrevMemoryPerfIndex(i.Perfindex)
       }
     })
     if(cpuIterator > 78 && memoryIterator<160){
@@ -309,10 +312,10 @@ React.useEffect(()=>{
     }
   }else{
     Memory.map((i,e) => {
-      if(currentBuild.Memory.includes(i.Model)){
-        console.log(i.Model + " " + i.PerfIndex)
-        setPerfIndex((perfIndex-prevMemoryPerfIndex)+i.PerfIndex)
-        setPrevMemoryPerfIndex(i.PerfIndex)
+      if(currentBuild.Memory.includes(i.model)){
+        console.log(i.model + " " + i.perfindex)
+        setPerfIndex((perfIndex-prevMemoryPerfIndex)+i.perfindex)
+        setPrevMemoryPerfIndex(i.perfindex)
       }
     })
   }
@@ -321,10 +324,10 @@ React.useEffect(()=>{
 React.useEffect(()=>{
   if(isLoaded){
     GPUS.map((i,e) => {
-      if(props.loadedBuild.GPU.includes(i.Model) && memoryIterator > 78){
-        console.log(props.loadedBuild.GPU + " " + i.PerfIndex)
-        setPerfIndex((perfIndex-prevGPUPerfIndex)+i.PerfIndex)
-        setPrevGPUPerfIndex(i.PerfIndex)
+      if(props.loadedBuild.GPU.includes(i.model) && memoryIterator > 78){
+        console.log(props.loadedBuild.GPU + " " + i.perfindex)
+        setPerfIndex((perfIndex-prevGPUPerfIndex)+i.perfindex)
+        setPrevGPUPerfIndex(i.perfindex)
       }
     })
     if(memoryIterator > 158 &&  gpuIterator < 220){
@@ -333,10 +336,10 @@ React.useEffect(()=>{
     }
   }else{
     GPUS.map((i,e) => {
-      if(currentBuild.GPU.includes(i.Model)){
+      if(currentBuild.GPU.includes(i.model)){
         console.log(i)
-        setPerfIndex((perfIndex-prevGPUPerfIndex)+i.PerfIndex)
-        setPrevGPUPerfIndex(i.PerfIndex)
+        setPerfIndex((perfIndex-prevGPUPerfIndex)+i.perfindex)
+        setPrevGPUPerfIndex(i.perfindex)
       }
     })
   }
@@ -485,7 +488,7 @@ React.useEffect(() => {
     const CalcualtedPart = SemiSubstrPart.substr(0, SemiSubstrPart.indexOf(',')+2)
 
     setSockets(CalcualtedPart)
-
+    console.log(CalcualtedPart)
   }
 
   function getMemoryType(Part){

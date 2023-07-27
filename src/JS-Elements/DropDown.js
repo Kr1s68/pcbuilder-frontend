@@ -89,7 +89,7 @@ export default function DropDown(props){
         props.setMotherboard(Part)
       }else{
         if(!isLoaded){
-          setButtonText("Incompatible Part")
+          setButtonText(Part)
         }else{
           setButtonText(Part)
         }
@@ -232,23 +232,23 @@ export default function DropDown(props){
                             <div key = {index} className='Item' 
                             onClick={() => {
                               handleDropDownClick(
-                              Items.Model + 
-                              Items.Socket + 
-                              Items.CoreCount + 
-                              Items.ThreadCount + 
-                              Items.CoreFrequency +
-                              Items.NodeProcess +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.socket + ", " +
+                              Items.corecount + ", " +
+                              Items.threadcount + ", " +
+                              Items.corefrequency + ", " +
+                              Items.nodeprocess + ", " +
+                              "Цена: " + Items.price + "лв"
                               )
                             }} > 
                             {
-                              Items.Model + 
-                              Items.Socket + 
-                              Items.CoreCount + 
-                              Items.ThreadCount + 
-                              Items.CoreFrequency +
-                              Items.NodeProcess +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.socket + ", " +
+                              Items.corecount + ", " +
+                              Items.threadcount + ", " +
+                              Items.corefrequency + ", " +
+                              Items.nodeprocess + ", " +
+                              "Цена: " + Items.price + "лв"
                             }
                             </div>
                           
@@ -258,24 +258,24 @@ export default function DropDown(props){
 
                             <div key = {index} className='Item' onClick={() => {handleDropDownClick(
 
-                              Items.Model + 
-                              Items.Memory + 
-                              Items.CoreFrequency +
-                              Items.BoostCoreFrequency +
-                              Items.Interface +
-                              Items.TDP +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.memory + ", " +
+                              Items.corefrequency + ", " +
+                              Items.boostcorefrequency +", " +
+                              Items.interface +", " +
+                              Items.tdp +", " +
+                              "Цена: " + Items.price + "лв"
 
                             )}} > 
                             {
 
-                              Items.Model + 
-                              Items.Memory + 
-                              Items.CoreFrequency +
-                              Items.BoostCoreFrequency +
-                              Items.Interface +
-                              Items.TDP +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.memory + ", " +
+                              Items.corefrequency +", " +
+                              Items.boostcorefrequency +", " +
+                              Items.interface +", " +
+                              Items.tdp +", " +
+                              "Цена: " + Items.price + "лв"
 
                             }
                             </div>
@@ -284,22 +284,22 @@ export default function DropDown(props){
 
                     } else if (props.Type === "Motherboard"){
                       return (
-                            <div style = {Items.Socket !== props.CurrentSocket ? { display: 'none'} : console.log("passed")} key = {index} className='Item' onClick={() => {handleDropDownClick(
-                              Items.Model + 
-                              Items.Socket + 
-                              Items.Chipset +
-                              Items.Memory +
-                              Items.FormFactor +
-                              "Цена: " + Items.Price + "лв"
+                            <div style = {Items.socket + ", " !== props.CurrentSocket ? { display: 'none'} : console.log("passed")} key = {index} className='Item' onClick={() => {handleDropDownClick(
+                              Items.model + ", " +
+                              Items.socket + ", " +
+                              Items.chipset + ", " +
+                              Items.memory + ", " +
+                              Items.formfactor + ", " +
+                              "Цена: " + Items.price + "лв"
                             )}} > 
                             {
-                              Items.Socket === props.CurrentSocket ?
-                              Items.Model + 
-                              Items.Socket + 
-                              Items.Chipset +
-                              Items.Memory +
-                              Items.FormFactor +
-                              "Цена: " + Items.Price + "лв"
+                              Items.socket + ", " === props.CurrentSocket ?
+                              Items.model + ", " +
+                              Items.socket + ", " +
+                              Items.chipset + ", " +
+                              Items.memory + ", " +
+                              Items.formfactor + ", " +   
+                              "Цена: " + Items.price + "лв"
                               :
                               "Incompatible"
                             }
@@ -308,24 +308,24 @@ export default function DropDown(props){
                     } else if (props.Type === "Memory"){
                         return (
 
-                              <div style = {Items.Speed.includes(props.memoryType) ? console.log("passed") : { display: 'none'}} key = {index} className='Item' onClick={() => {handleDropDownClick(
+                              <div style = {Items.speed.includes(props.memoryType) ? console.log("passed") : { display: 'none'}} key = {index} className='Item' onClick={() => {handleDropDownClick(
 
-                                Items.Model + 
-                                Items.Size + 
-                                Items.Speed +
-                                Items.Latency +
-                                "Цена: " + Items.Price + "лв"
+                                Items.model + ", " +
+                                Items.size + ", " +
+                                Items.speed +", " +
+                                Items.latency +", " +
+                                "Цена: " + Items.price + "лв"
 
                               )}} > 
                               {
                                 
                               
 
-                                Items.Model + 
-                                Items.Size + 
-                                Items.Speed +
-                                Items.Latency +
-                                "Цена: " + Items.Price + "лв"
+                                Items.model + ", " +
+                                Items.size + ", " +
+                                Items.speed +", " +
+                                Items.latency +", " +
+                                "Цена: " + Items.price + "лв"
 
                               }
                               </div>
@@ -338,22 +338,22 @@ export default function DropDown(props){
 
                           <div key = {index} className='Item' onClick={() => {handleDropDownClick(
 
-                            Items.Model + 
-                            Items.Size + 
-                            Items.Interface +
-                            Items.Speed +
-                            "Цена: " + Items.Price + "лв"
+                            Items.model + ", " +
+                            Items.size + ", " +
+                            Items.interface +", " +
+                            Items.speed +", " +
+                            "Цена: " + Items.price + "лв"
 
                           )}} > 
                           {
                             
                           
 
-                            Items.Model + 
-                            Items.Size + 
-                            Items.Interface +
-                            Items.Speed +
-                            "Цена: " + Items.Price + "лв"
+                            Items.model + ", " +
+                            Items.size + ", " +
+                            Items.interface +", " +
+                            Items.speed +", " +
+                            "Цена: " + Items.price + "лв"
 
                           }
                           </div>
@@ -364,22 +364,22 @@ export default function DropDown(props){
 
                       return (
 
-                            <div  style = {checkWeight(ffWeight, Items.Size) ? console.log("passed"):{ display: 'none'} }  key = {index} className='Item' onClick={() => {handleDropDownClick(
+                            <div  style = {checkWeight(ffWeight, Items.size) ? console.log("passed"):{ display: 'none'} }  key = {index} className='Item' onClick={() => {handleDropDownClick(
 
-                              Items.Model + 
-                              Items.FormFactor + 
-                              Items.Size +
-                              Items.Color +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.formfactor + ", " +
+                              Items.size +", " +
+                              Items.color +", " +
+                              "Цена: " + Items.price + "лв"
 
                             )}} > 
                             {
                               
-                              Items.Model + 
-                              Items.FormFactor + 
-                              Items.Size +
-                              Items.Color +
-                              "Цена: " + Items.Price + "лв"
+                              Items.model + ", " +
+                              Items.formfactor + ", " +
+                              Items.size +", " +
+                              Items.color +", " +
+                              "Цена: " + Items.price + "лв"
 
                             }
                             </div>
@@ -392,22 +392,22 @@ export default function DropDown(props){
 
                                 <div key = {index} className='Item' onClick={() => {handleDropDownClick(
 
-                                  Items.Model + 
-                                  Items.PowerStandard + 
-                                  Items.Power +
-                                  Items.FormFactor +
-                                  Items.Usability +
-                                  "Цена: " + Items.Price + "лв"
+                                  Items.model + ", " +
+                                  Items.powerstandard + ", " +
+                                  Items.power +", " +
+                                  Items.formfactor +", " +
+                                  Items.usability +", " +
+                                  "Цена: " + Items.price + "лв"
 
                                 )}} > 
                                 {
                                   
-                                  Items.Model + 
-                                  Items.PowerStandard + 
-                                  Items.Power +
-                                  Items.FormFactor +
-                                  Items.Usability +
-                                  "Цена: " + Items.Price + "лв"
+                                  Items.model + ", " +
+                                  Items.powerstandard + ", " +
+                                  Items.power +", " +
+                                  Items.formfactor +", " +
+                                  Items.usability +", " +
+                                  "Цена: " + Items.price + "лв"
 
                                 }
                                 </div>
