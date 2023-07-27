@@ -169,7 +169,7 @@ const saveBuild= () => {
   /*
   const getUsers = () => {
 
-    Axios.get('http://localhost:3001/checkAdmin',{ 
+    Axios.get('https://pcbuilder-api.onrender.com/checkAdmin',{ 
 
     }).then((response) => setUsers(response.data))
 
@@ -180,7 +180,7 @@ const saveBuild= () => {
 
   const getCpus = () => {
 
-    Axios.get(`http://localhost:3001/api/data/Cpus`,{ 
+    Axios.get(`https://pcbuilder-api.onrender.com/api/data/Cpus`,{ 
 
     }).then((response) => setCPUS(response.data.rows))
 
@@ -193,7 +193,7 @@ const [Motherboards, setMotherboards] = React.useState([])
 
 const getMotherboards = () => {
 
-  Axios.get(`http://localhost:3001/api/data/Motherboards`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/Motherboards`,{ 
 
   }).then((response) => setMotherboards(response.data.rows))
 
@@ -204,7 +204,7 @@ const [GPUS, setGPUS] = React.useState([])
 
 const getGPUS = () => {
 
-  Axios.get(`http://localhost:3001/api/data/GPUS`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/GPUS`,{ 
 
   }).then((response) => setGPUS(response.data.rows))
 
@@ -215,7 +215,7 @@ const [Memory, setMemory] = React.useState([])
 
 const getMemory = () => {
 
-  Axios.get(`http://localhost:3001/api/data/Memory`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/Memory`,{ 
 
   }).then((response) => setMemory(response.data.rows))
 
@@ -226,7 +226,7 @@ const [Storage, setStorage] = React.useState([])
 
 const getStorage = () => {
 
-  Axios.get(`http://localhost:3001/api/data/Storage`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/Storage`,{ 
 
   }).then((response) => setStorage(response.data.rows))
 
@@ -237,7 +237,7 @@ const [Cases, setCases] = React.useState([])
 
 const getCases = () => {
 
-  Axios.get(`http://localhost:3001/api/data/Cases`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/Cases`,{ 
 
   }).then((response) => setCases(response.data.rows))
 
@@ -248,7 +248,7 @@ const [PSUS, setPSUS] = React.useState([])
 
 const getPSUS = () => {
 
-  Axios.get(`http://localhost:3001/api/data/PSUS`,{ 
+  Axios.get(`https://pcbuilder-api.onrender.com/api/data/PSUS`,{ 
 
   }).then((response) => setPSUS(response.data.rows))
 
