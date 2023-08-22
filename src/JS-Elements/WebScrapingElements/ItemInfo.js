@@ -21,7 +21,7 @@ export default function ItemInfo(props) {
     }
 
   const loadPrices = async () => {
-        await axios.get(`http://localhost:3001/api/data/getItemInfo`,{ params }).then((response) => {
+        await axios.get(`https://pcbuilder-api.onrender.com/api/data/getItemInfo`,{ params }).then((response) => {
           setItemInfo(response)
           setIsLoaded(true)
         })  
